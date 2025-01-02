@@ -50,6 +50,8 @@
     - Then press F5 or click Start to run the project.
 
 ## Examples
+![image](https://github.com/user-attachments/assets/b1d71d01-f38b-46ab-9a28-54d38df252b5)  
+![image](https://github.com/user-attachments/assets/6a4db2dd-cd00-4c05-ba0d-0b00ee264567)
 
 ## Project Status
 Project is: _in progress_ 🛠️
