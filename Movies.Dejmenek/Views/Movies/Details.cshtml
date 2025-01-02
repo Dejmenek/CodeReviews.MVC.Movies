@@ -1,0 +1,52 @@
+﻿@model Movies.Dejmenek.Models.Movie
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="text-primary">Details</h1>
+
+<div class="my-4">
+    <dl class="row">
+        <dt class = "col-sm-2 text-primary">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10 text-secondary">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2 text-primary">
+            @Html.DisplayNameFor(model => model.ImageUri)
+        </dt>
+        <dd class="col-sm-10 text-secondary">
+            <img src="@(Url.Content(Model.ImageUri ?? "~/img/placeholder.jpg"))" class="img-thumbnail preview" />
+        </dd>
+        <dt class="col-sm-2 text-primary">
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+        <dd class="col-sm-10 text-secondary">
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+        <dt class="col-sm-2 text-primary">
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </dt>
+        <dd class="col-sm-10 text-secondary">
+            @Html.DisplayFor(model => model.ReleaseDate)
+        </dd>
+        <dt class="col-sm-2 text-primary">
+            @Html.DisplayNameFor(model => model.Genre)
+        </dt>
+        <dd class="col-sm-10 text-secondary">
+            @Html.DisplayFor(model => model.Genre)
+        </dd>
+        <dt class="col-sm-2 text-primary">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10 text-secondary">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn bg-primary text-black" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>
+    <a asp-action="Index">Back to List</a>
+</div>

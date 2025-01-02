@@ -1,0 +1,98 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section class="my-5 container py-2">
+    <div class="row gap-5 align-items-sm-center">
+        <div class="col-sm-8">
+            <h1 class="text-primary mb-4">Discover and Manage Your Movie Watchlist Effortlessly!</h1>
+            <a class="btn-lg bg-primary text-black mt-3 border-0 p-3 rounded-3" asp-controller="Movies" asp-action="Create">Create New</a>
+        </div>
+        <div class="col-sm">
+            <img class="img-fluid" src="~/img/heroImage.png" />
+        </div>
+    </div>
+</section>
+
+<section class="my-5 py-2">
+    <h2 class="text-primary text-center">Our Stats</h2>
+    <div class="container text-center mt-4">
+        <div class="row align-items-center justify-content-between gap-2">
+            <div class="col-md bg-primary rounded-pill p-2">
+                <span class="text-black fs-2">10,000+</span>
+                <p class="text-black fs-5">Movies Tracked</p>
+            </div>
+            <div class="col-md bg-primary rounded-pill p-2">
+                <span class="text-black fs-2">5,000+</span>
+                <p class="text-black fs-5">Active Users</p>
+            </div>
+            <div class="col-md bg-primary rounded-pill p-2">
+                <span class="text-black fs-2">20,000+</span>
+                <p class="text-black fs-5">Reviews Written</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="my-5 py-2">
+    <h2 class="text-primary text-center">Features</h2>
+    <div class="container text-center mt-4">
+        <div class="row align-items-sm-center gap-2">
+            <div class="col-md">
+                <img src="~/img/Lol.svg" />
+                <div class="mt-3">
+                    <h3 class="text-primary">Easy to Use</h3>
+                    <p class="text-secondary">Our platform is designed with simplicity in mind, making it easy for you to add, manage, and track your movies.</p>
+                </div>
+            </div>
+            <div class="col-md">
+                <img src="~/img/Favorite.svg" />
+                <div class="mt-3">
+                    <h3 class="text-primary">Personalized Recommendations</h3>
+                    <p class="text-secondary">Get movie recommendations based on your watchlist and preferences.</p>
+                </div>
+            </div>
+            <div class="col-md">
+                <img src="~/img/Ticket.svg" />
+                <div class="mt-3">
+                    <h3 class="text-primary">Track Movies</h3>
+                    <p class="text-secondary">Add, remove, and update your watched movies list.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="my-5 py-2">
+    <h2 class="text-primary text-center">What Our Movie Enthusiasts Say</h2>
+    <div class="container mt-4">
+        <div class="row my-4 text-center gap-3">
+            <div class="col-sm">
+                <img class="rounded-circle" src="~/img/reviewer1.jpg"/>
+                <div class="mt-3">
+                    <h3 class="text-primary">MovieBuff99</h3>
+                    <p class="text-secondary">This website has completely changed how I track movies. I never lose track of what I want to watch!</p>
+                </div>
+            </div>
+            <div class="col-sm">
+                <img class="rounded-circle" src="~/img/reviewer2.jpg"/>
+                <div class="mt-3">
+                    <h3 class="text-primary">CineFanatic</h3>
+                    <p class="text-secondary">This site makes organizing my watchlist a breeze! I love how I can quickly see what I've watched and what's still pending.</p>
+                </div>
+            </div>
+            <div class="col-sm">
+                <img class="rounded-circle" src="~/img/reviewer3.jpg" />
+                <div class="mt-3">
+                    <h3 class="text-primary">WatchlistPro</h3>
+                    <p class="text-secondary">This site saved my sanity. I used to forget which movies I watched or which I planned to. Now, everything’s neatly organized.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="d-flex flex-wrap justify-content-between align-items-center bg-primary p-5 rounded-3 my-4">
+    <h3 class="text-black">Join thousands of movie lovers</h3>
+    <a class="btn btn-outline-light fs-3 border-3 text-black">Sign Up Now</a>
+</section>

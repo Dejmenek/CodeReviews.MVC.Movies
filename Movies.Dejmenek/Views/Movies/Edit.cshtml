@@ -1,0 +1,55 @@
+﻿@model Movies.Dejmenek.Models.MovieDTO
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1 class="text-primary">Edit</h1>
+<div class="text-center text-lg-start my-4">
+    <p class="text-secondary">Current image:</p>
+    <img src="@(Url.Content(Model.ImageUri ?? "~/img/placeholder.jpg"))" class="img-thumbnail preview" />
+</div>
+        <form class="row row-cols-md-2 row-cols-lg-3 my-2" asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-primary"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="ImageUri" />
+            <div class="col-md form-group">
+                <label asp-for="Title" class="control-label text-secondary"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-primary"></span>
+            </div>
+            <div class="col-md form-group">
+                <label asp-for="ImageFile" class="control-label text-secondary"></label>
+                <input asp-for="ImageFile"
+                       class="form-control"
+                       accept=".png, .jpg, .jpeg" />
+            </div>
+            <div class="col-md form-group">
+                <label asp-for="Rating" class="control-label text-secondary"></label>
+                <input asp-for="Rating" class="form-control" />
+                <span asp-validation-for="Rating" class="text-primary"></span>
+            </div>
+            <div class="col-md form-group">
+                <label asp-for="ReleaseDate" class="control-label text-secondary"></label>
+                <input asp-for="ReleaseDate" class="form-control" />
+                <span asp-validation-for="ReleaseDate" class="text-primary"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Genre" class="control-label text-secondary"></label>
+                <input asp-for="Genre" class="form-control" />
+                <span asp-validation-for="Genre" class="text-primary"></span>
+            </div>
+            <div class="col-md form-group">
+                <label asp-for="Price" class="control-label text-secondary"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-primary"></span>
+            </div>
+            <div class="col-md form-group mt-3">
+                <input type="submit" value="Save" class="btn bg-primary" />
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
