@@ -6,10 +6,16 @@ namespace Movies.Dejmenek.Services;
 public class BlobService : IBlobService
 {
     private readonly BlobServiceClient _blobServiceClient;
-    private const string _containerName = "files";
-    public BlobService(BlobServiceClient blobServiceClient)
+    private readonly string _containerName;
+
+    public BlobService(BlobServiceClient blobServiceClient, IConfiguration configuration)
     {
         _blobServiceClient = blobServiceClient;
+        _containerName = configuration["AzureStorage:ContainerName"];
+        if (string.IsNullOrWhiteSpace(_containerName))
+        {
+            throw new InvalidOperationException("The Azure Storage container name is not configured. Please set 'AzureStorage:ContainerName' in the configuration.");
+        }
         EnsureContainerCreated().GetAwaiter().GetResult();
     }
 
